@@ -1,9 +1,9 @@
-# gqlpy
+# gqlite
 
 Lightweight client for GraphQL in Python.
 
 ```bash
-pip install gqlpy
+pip install gqlite
 ```
 
 Set the two environment variables:
@@ -16,9 +16,9 @@ You can also set these in `.env`.
 Then:
 
 ```python
-import gqlpy
+import gqlite
 
 query: str = ... # your GraphQL query
 
-json_response = gqlpy.post(query)
+json_response = gqlite.post(query)
 ```

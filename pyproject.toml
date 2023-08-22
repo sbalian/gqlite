@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "gqlpy"
+name = "gqlite"
 version = "0.1.0"
 description = "Lightweight client for GraphQL in Python"
 authors = ["Seto Balian <seto.balian@gmail.com>"]
