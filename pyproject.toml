@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gqlpy"
-version = "0.0.0"
+version = "0.1.0"
 description = "Lightweight client for GraphQL in Python"
 authors = ["Seto Balian <seto.balian@gmail.com>"]
 license = "MIT"
@@ -16,12 +16,6 @@ flake8 = "^6.1.0"
 isort = "^5.12.0"
 black = "^23.7.0"
 mypy = "^1.5.1"
-
-[tool.poetry-dynamic-versioning]
-enable = true
-vcs = "git"
-style = "pep440"
-pattern = "default-unprefixed"
 
 [tool.black]
 line-length = 79
@@ -45,5 +39,5 @@ exclude = [
 ]
 
 [build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
-build-backend = "poetry_dynamic_versioning.backend"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
