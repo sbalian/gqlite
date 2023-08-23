@@ -23,8 +23,8 @@ class Client:
         return response.json()
 
 
-url = os.getenv("GQLPY_URL", "")
-token = os.getenv("GQLPY_TOKEN", "")
+url = os.getenv("GQLITE_URL", "")
+token = os.getenv("GQLITE_TOKEN", "")
 
 client = Client(url=url, token=token)
 query = client.query
