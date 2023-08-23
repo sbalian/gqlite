@@ -13,10 +13,10 @@ class Client:
         self.url = url
         self.headers = {"Authorization": f"Bearer {token}"}
 
-    def post(self, query: str) -> dict:
+    def query(self, text: str) -> dict:
         response = requests.post(
             self.url,
-            json={"query": query},
+            json={"query": text},
             headers=self.headers,
         )
         response.raise_for_status()
@@ -26,6 +26,5 @@ class Client:
 url = os.getenv("GQLPY_URL", "")
 token = os.getenv("GQLPY_TOKEN", "")
 
-_inst = Client(url=url, token=token)
-
-post = _inst.post
+client = Client(url=url, token=token)
+query = client.query
