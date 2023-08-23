@@ -1,24 +1,28 @@
 # gqlite
 
-Lightweight client for GraphQL in Python.
+Simple client for querying GraphQL from Python using
+[`requests`](https://requests.readthedocs.io/en/latest/).
+
+## Installation
 
 ```bash
 pip install gqlite
 ```
 
-Set the two environment variables:
+## Usage
 
-1. `GQLPY_URL` for the URL.
-2. `GQLPY_TOKEN` for the authorization token.
-
-You can also set these in `.env`.
-
-Then:
+First set the two environment variables `GQLITE_URL` and `GQLITE_TOKEN`.
+You can also use a `.env` file for these. Then:
 
 ```python
 import gqlite
 
-query: str = ... # your GraphQL query
+text = """
+  hero {
+    name
+  }
+}
+"""
+gqlite.query(text)  # returns a dict
 
-json_response = gqlite.post(query)
 ```
