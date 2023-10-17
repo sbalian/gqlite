@@ -26,3 +26,6 @@ text = """
 gqlite.query(text)  # returns a dict
 
 ```
+
+You can also set variables using the `variables` keyword argument of
+`gqlite.query`.

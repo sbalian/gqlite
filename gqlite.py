@@ -13,10 +13,10 @@ class Client:
         self.url = url
         self.headers = {"Authorization": f"Bearer {token}"}
 
-    def query(self, text: str) -> dict:
+    def query(self, text: str, variables: dict | None = None) -> dict:
         response = requests.post(
             self.url,
-            json={"query": text},
+            json={"query": text, "variables": variables},
             headers=self.headers,
         )
         response.raise_for_status()
